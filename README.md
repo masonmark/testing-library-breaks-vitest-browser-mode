@@ -10,11 +10,13 @@ But when the unsuspecting developer executes `npm install @testing-library/angul
 
 # TL;DR
 
-When you add `@testing-library/angular` to a working project that uses vitest to run its tests, in Browser Mode, the tests will break and start failing with fairly cryptic error messahes. However, they will break in such a way that it may not be noticeable until after the first time the `node_modules` folder is deleted and recreated. They will keep passing until then, thereby obfuscating what change introduced the breakage. ( SPOILER ALERT: It was adding `@testing-library/angular`)
+When you add `@testing-library/angular` to a working project that uses `vitest` to run its tests, in Browser Mode, the tests will break and start failing with fairly cryptic error messages. However, they will break in such a way that it may not be noticeable until after the first time the `node_modules` folder is deleted and recreated.
+
+The tests will actually (and insidiously) keep passing until that happens, thereby obfuscating what change introduced the breakage. (**SPOILER ALERT**: It was adding `@testing-library/angular`.)
 
 ## Steps to reproduce
 
-1. Check out the repo, and stay on the `main`` branch.
+1. Check out the repo, and stay on the `main` branch.
 
 2. Run `npm run test` (or `npx vitest`) from the root directory.
 
@@ -26,7 +28,7 @@ When you add `@testing-library/angular` to a working project that uses vitest to
 
 6. Do `rm -rf node_modules`. If on a Mac with Apple Silicon, do it over and over until their are no weird errors due to your OS's inability to delete files.
 
-7. Start thinking about all the awesome stuff you are gonna do tonigh, and maybe consider ending work early today — you deserve it!
+7. Start thinking about all the awesome stuff you are gonna do tonight, and maybe consider ending work early today — you deserve it!
 
 8. But just in case, run those tests one more time, with `npm run test` (or `npx vitest`) from the root directory.
 
@@ -41,6 +43,8 @@ When you add `@testing-library/angular` to a working project that uses vitest to
 ## Pathological level of detail, with bonus thoughts
 
 ```shell
+# ahem!
+
 ➜  testing-library-breaks-vitest-browser-mode git:(main) ✗ npm run test # A.) THIS IS GONNA WORK
 
 > testing-library-breaks-vitest-browser-mode@1.0.0 test
