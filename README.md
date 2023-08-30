@@ -2,7 +2,7 @@
 
 This is a minimal project to reproduce a bug.
 
-This bug reproduction was refactored, at Great Expense and Inconvenience, from a large production monorepo.
+This bug reproduction was factored out of a large production monorepo, at Great Expense and Inconvenience.
 
 This is a minimal working project which uses [vitest in Browser Mode](https://vitest.dev/guide/browser.html) to test its awesome code.
 
@@ -18,27 +18,29 @@ The tests will actually (and insidiously) keep passing until that happens, there
 
 1. Check out the repo, and stay on the `main` branch.
 
-2. Run `npm run test` (or `npx vitest`) from the root directory.
+1. Run `npm install`.
 
-3. Observe the tests that the tests pass, and rejoice.
+1. Run `npm run test` (or `npx vitest`) from the root directory.
 
-4. Add `@testing-library/angular` to the `package.json` file, like this: `npm install @testing-library/angular@latest`
+1. Observe the tests that the tests pass, and rejoice.
 
-5. Immediately run the tests again, with `npm run test` (or `npx vitest`) from the root directory, and bask in the green successfulness of them. Congratulate yourself for your own awesomeness.
+1. Add `@testing-library/angular` to the `package.json` file, like this: `npm install @testing-library/angular@latest`
 
-6. Do `rm -rf node_modules`. If on a Mac with Apple Silicon, do it over and over until their are no weird errors due to your OS's inability to delete files.
+1. Immediately run the tests again, with `npm run test` (or `npx vitest`) from the root directory, and bask in the green successfulness of them. Congratulate yourself for your own awesomeness.
 
-7. Start thinking about all the awesome stuff you are gonna do tonight, and maybe consider ending work early today — you deserve it!
+1. Do `rm -rf node_modules`. If on a Mac with Apple Silicon, do it over and over until their are no weird errors due to your OS's inability to delete files.
 
-8. But just in case, run those tests one more time, with `npm run test` (or `npx vitest`) from the root directory.
+1. Start thinking about all the awesome stuff you are gonna do tonight, and maybe consider ending work early today — you deserve it!
 
-9. 😱 😱 😱 😱 😱 😱 😱 😱 😱 😱 😱
+1. But just in case, run those tests one more time, so run `npm install` again, followed by `npm run test` (or `npx vitest`) from the root directory.
 
-10. Note that the tests do not, in fact, pass. They fail with the error below. Feel the confidence you gained earlier, in step 5, slowly morph into existential dread about software development specifically, but also life itself, generally.
+1. 😱 😱 😱 😱 😱 😱 😱 😱 😱 😱 😱
 
-11. ???
+1. Note that the tests do not, in fact, pass. They fail with the error below. Feel the confidence you gained earlier, in step 6, slowly morph into existential dread about software development specifically, but also life itself, generally.
 
-12. Profit!
+1. ???
+
+1. Profit!
 
 ## Pathological level of detail, with bonus thoughts
 
