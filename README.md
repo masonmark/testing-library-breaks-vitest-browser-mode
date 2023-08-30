@@ -8,6 +8,8 @@ This is a minimal working project which uses [vitest in Browser Mode](https://vi
 
 But when the unsuspecting developer executes `npm install @testing-library/angular@latest` she is suddenly thrust into a cataclysmic fight against the evil forces of `SyntaxError: ambiguous indirect export: __vi_inject__` anf the survival of humanity itself hangs in the balance...
 
+![image](https://github.com/masonmark/testing-library-breaks-vitest-browser-mode/assets/122212/9b6338e1-ddd1-41e3-8f7a-3e00abc789dd)
+
 # TL;DR
 
 When you add `@testing-library/angular` to a working project that uses `vitest` to run its tests, in Browser Mode, the tests will break and start failing with fairly cryptic error messages. However, they will break in such a way that it may not be noticeable until after the first time the `node_modules` folder is deleted and recreated.
